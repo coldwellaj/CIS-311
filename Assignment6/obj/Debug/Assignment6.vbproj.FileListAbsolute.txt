@@ -1,0 +1,36 @@
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\bin\Debug\Assignment6.exe.config
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\bin\Debug\Assignment6.exe
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\bin\Debug\Assignment6.pdb
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\bin\Debug\Assignment6.xml
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\obj\Debug\Assignment6.vbprojResolveAssemblyReference.cache
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\obj\Debug\Assignment6.Form2.resources
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\obj\Debug\Assignment6.frmCalculator.resources
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\obj\Debug\Assignment6.Resources.resources
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\obj\Debug\Assignment6.vbproj.GenerateResource.Cache
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\obj\Debug\Assignment6.exe
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\obj\Debug\Assignment6.xml
+C:\Users\Coldwellaj\AppData\Local\Temporary Projects\Assignment6\obj\Debug\Assignment6.pdb
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\bin\Debug\Assignment6.exe.config
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\obj\Debug\Assignment6.exe
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\obj\Debug\Assignment6.xml
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\obj\Debug\Assignment6.pdb
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\bin\Debug\Assignment6.exe
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\bin\Debug\Assignment6.pdb
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\bin\Debug\Assignment6.xml
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\obj\Debug\Assignment6.vbprojResolveAssemblyReference.cache
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\obj\Debug\Assignment6.Form2.resources
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\obj\Debug\Assignment6.frmCalculator.resources
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\obj\Debug\Assignment6.Resources.resources
+C:\Users\Coldwellaj\Documents\School\CIS311\Assignment6\obj\Debug\Assignment6.vbproj.GenerateResource.Cache
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\bin\Debug\Assignment6.exe.config
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.exe
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.xml
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.pdb
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\bin\Debug\Assignment6.exe
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\bin\Debug\Assignment6.pdb
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\bin\Debug\Assignment6.xml
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.vbprojResolveAssemblyReference.cache
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.frmCalculator.resources
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.Resources.resources
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.vbproj.GenerateResource.Cache
+C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.MdiParent.resources
