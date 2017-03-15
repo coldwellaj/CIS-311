@@ -18,3 +18,7 @@ C:\Users\coldw\Documents\School\CIS 311\Assignment5\bin\Debug\Assignment5.xml
 C:\Users\coldw\Documents\School\CIS 311\Assignment5\obj\Debug\Assignment5.vbprojResolveAssemblyReference.cache
 C:\Users\coldw\Documents\School\CIS 311\Assignment5\obj\Debug\Assignment5.Resources.resources
 C:\Users\coldw\Documents\School\CIS 311\Assignment5\obj\Debug\Assignment5.vbproj.GenerateResource.Cache
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment5\bin\Debug\Assignment5.exe.config
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment5\obj\Debug\Assignment5.exe
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment5\obj\Debug\Assignment5.xml
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment5\obj\Debug\Assignment5.pdb

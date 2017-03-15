@@ -34,3 +34,7 @@ C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.frmCal
 C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.Resources.resources
 C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.vbproj.GenerateResource.Cache
 C:\Users\coldw\Documents\School\CIS 311\Assignment6\obj\Debug\Assignment6.MdiParent.resources
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment6\bin\Debug\Assignment6.exe.config
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment6\obj\Debug\Assignment6.exe
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment6\obj\Debug\Assignment6.xml
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment6\obj\Debug\Assignment6.pdb
