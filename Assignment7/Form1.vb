@@ -79,6 +79,7 @@
                     My.Computer.FileSystem.DeleteFile(strDestination)
                     My.Computer.FileSystem.MoveFile(strSource, strDestination)
                 Else
+                    intBytesProcessed += FileLen(strSource)
                     MessageBox.Show("The file you selected to move already exists in the" + vbCrLf +
                     "destination directory. You selected to not copy if the file already" + vbCrLf +
                     "exist, so if you would like to overwrite the file please select the" + vbCrLf +
