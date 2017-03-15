@@ -51,8 +51,16 @@
             strDestination = txtDestination.Text + "\" + elem
             If IO.File.Exists(strDestination) Then
                 If tbrOverwrite.Value = 1 Then
+                    My.Computer.FileSystem.DeleteFile(strDestination)
                     My.Computer.FileSystem.MoveFile(strSource, strDestination)
+                Else
+                    MessageBox.Show("The file you selected to move already exists in the" + vbCrLf +
+                    "destination directory. You selected to not copy if the file already" + vbCrLf +
+                    "exist, so if you would like to overwrite the file please select the" + vbCrLf +
+                    "option on the trackbar.")
                 End If
+            Else
+                My.Computer.FileSystem.MoveFile(strSource, strDestination)
             End If
         Next
 
