@@ -45,12 +45,37 @@
     Private Sub lstDestination_DragDrop(sender As Object, e As DragEventArgs) Handles lstDestinationFiles.DragDrop
         Dim strSource As String
         Dim strDestination As String
+        Dim intTotalBytes As Integer = 0
+        Dim intBytesProcessed As Integer = 0
+        Dim intTotalFiles As Integer = 0
+        Dim intFilesProcessed As Integer = 1
 
-        For Each elem In lstSourceFiles.SelectedItems()
-            strSource = txtSource.Text + "\" + elem
-            strDestination = txtDestination.Text + "\" + elem
+        For Each file In lstSourceFiles.SelectedItems()
+            strSource = txtSource.Text + "\" + file
+            intTotalBytes += FileLen(strSource)
+            intTotalFiles += 1
+        Next
+
+
+        lblFileProcess.Text = ""
+        lblByteProcess.Text = "Bytes Processed: " & intBytesProcessed &
+                " / " & intTotalBytes
+        ProgressBar1.Maximum = intTotalBytes
+        ProgressBar1.Value = intBytesProcessed
+
+        For Each file In lstSourceFiles.SelectedItems()
+            strSource = txtSource.Text + "\" + file
+            strDestination = txtDestination.Text + "\" + file
+
+            ' Print labels for progress toolstrip
+            lblFileProcess.Text = "Processing File: " & strSource
+            lblFileNumber.Text = "Processing File: " & intFilesProcessed &
+                " of " & intTotalFiles
+
+
             If IO.File.Exists(strDestination) Then
                 If tbrOverwrite.Value = 1 Then
+                    intBytesProcessed += FileLen(strSource)
                     My.Computer.FileSystem.DeleteFile(strDestination)
                     My.Computer.FileSystem.MoveFile(strSource, strDestination)
                 Else
@@ -60,10 +85,14 @@
                     "option on the trackbar.")
                 End If
             Else
+                intBytesProcessed += FileLen(strSource)
                 My.Computer.FileSystem.MoveFile(strSource, strDestination)
             End If
+            intFilesProcessed += 1
+            lblByteProcess.Text = "Bytes Processed: " & intBytesProcessed &
+                " / " & intTotalBytes
         Next
-
+        ProgressBar1.Value = intBytesProcessed
         printSource(txtSource.Text)
         printDestination(txtDestination.Text)
     End Sub
@@ -94,5 +123,11 @@
             strFileName = strFileName.Remove(0, address.Length() + 1)
             lstDestinationFiles.Items.Add(strFileName)
         Next
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lblByteProcess.Text = ""
+        lblFileNumber.Text = ""
+        lblFileProcess.Text = ""
     End Sub
 End Class
