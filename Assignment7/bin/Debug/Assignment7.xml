@@ -22,5 +22,10 @@ Assignment7
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Assignment7.My.Resources.Resources.file_explorer_icon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>
