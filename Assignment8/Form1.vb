@@ -1,25 +1,73 @@
-﻿Imports System.Data.OleDb
+﻿'--------------------------------------------------------------------'
+'-          File name: Form1.vb                                     -'
+'-          Part of project: Assignment8                            -'
+'--------------------------------------------------------------------'
+'-          Written By: Alex Coldwell                               -'
+'-          Written On: 03/28/2017                                  -'
+'--------------------------------------------------------------------'
+'- File Purpose:                                                    -'
+'-                                                                  -'
+'- This file connects to an access database and then allows the     -'
+'- user to cycle through the customers, add new customers, update   -'
+'- existing customers, delete customers and there orders.           -'
+'--------------------------------------------------------------------'
+'- Program Purpose:                                                 -'
+'-                                                                  -'
+'- This program allows users to view records of customers and       -'
+'- their orders at an online store. The user can add new cutomers,  -'
+'- update existing cumtomers info, and delete custmers. User cannot -'
+'- add orders to the OrderedItems table.                            -'
+'--------------------------------------------------------------------'
+'- Global Variable Dictionary                                       -'
+'- dsOrderedItems - DataSet to hold OrderedItems Table              -'
+'- dsCustomers - DataSet to hold Customers Table                    -'
+'- DBConn - OleDbConnection to DataBase                             -'
+'- DBAdaptOrderedItems - DataAdapter for OrderedItems table         -'
+'- DBAdaptCustomers - DataAdapter for Customers table               -'
+'--------------------------------------------------------------------'
+
+Imports System.Data.OleDb
 Public Class Form1
+    ' DB name and address(placed in debug directory)
     Public Const gstrDBName As String = "HW8.accdb"
 
-    Public intCustID As Integer = 1
-
-    'This is where our results will land        
+    'DataSets for OrderedItems and Customers        
     Dim dsOrderedItems As New DataSet
     Dim dsCustomers As New DataSet
 
+    ' DB connection address
     Const gstrConnString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & gstrDBName &
                                             ";Persist Security Info=False"
 
-    'Here's the connection to the database object        
+    'DB Connection       
     Dim DBConn As New OleDbConnection(gstrConnString)
 
-    'We will use this to fill our data set with the DB        
+    'DBAdapters       
     Dim DBAdaptOrderedItems As OleDbDataAdapter
     Dim DBAdaptCustomers As OleDbDataAdapter
 
 
-
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: Form1_Load                  -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub is triggered when Form1 is loaded into memory. This  -'
+    '-   sub disables textboxes and sets panels. This sub then loads   -'
+    '-   the Customers table into the dsCutomers DS. This sub also     -'
+    '-   sets bindings on the customer related fields. This Sub then   -'
+    '-   loads the info from the ordered Items for the first Customer. -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- sender – Identifies which particular form raised the load       –'
+    '-          event                                                  -'
+    '- e – Holds the EventArgs object sent to the routine              -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   strSQLCmd - String to hold the SQL command                    -'
+    '-------------------------------------------------------------------'
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles Me.Load
         ' Disable Textboxes and set panels
         AddNew(False)
@@ -59,6 +107,25 @@ Public Class Form1
 
     End Sub
 
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: cmdFirst_Click              -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub is triggered when cmdFirst is clicked. This sub      -'
+    '-   changes the Binding context position to 0, and then refreshed -'
+    '-   the DGV.                                                      -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- sender – Identifies which particular control raised the click   –'
+    '-          event                                                  -'
+    '- e – Holds the EventArgs object sent to the routine              -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   (none)                                                        -'
+    '-------------------------------------------------------------------'
     Private Sub cmdFirst_Click(sender As Object, e As EventArgs) Handles cmdFirst.Click
         ' Move postion to first row
         BindingContext(dsCustomers, "Customers").Position = 0
@@ -67,6 +134,25 @@ Public Class Form1
         RefreshDGV()
     End Sub
 
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: cmdBack_Click               -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub is triggered when cmdBack is clicked. This sub       -'
+    '-   decrements the Binding context position by 1, and then        -'
+    '-   refreshed the DGV.                                            -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- sender – Identifies which particular control raised the click   –'
+    '-          event                                                  -'
+    '- e – Holds the EventArgs object sent to the routine              -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   (none)                                                        -'
+    '-------------------------------------------------------------------'
     Private Sub cmdBack_Click(sender As Object, e As EventArgs) Handles cmdBack.Click
         ' Move position to previous row
         BindingContext(dsCustomers, "Customers").Position = (BindingContext(dsCustomers,
@@ -77,6 +163,25 @@ Public Class Form1
 
     End Sub
 
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: cmdNext_Click               -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub is triggered when cmdNext is clicked. This sub       -'
+    '-   increments the Binding context position by 1, and then        -'
+    '-   refreshed the DGV.                                            -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- sender – Identifies which particular control raised the click   –'
+    '-          event                                                  -'
+    '- e – Holds the EventArgs object sent to the routine              -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   (none)                                                        -'
+    '-------------------------------------------------------------------'
     Private Sub cmdNext_Click(sender As Object, e As EventArgs) Handles cmdNext.Click
         ' Move Position to next row
         BindingContext(dsCustomers, "Customers").Position = (BindingContext(dsCustomers,
@@ -86,6 +191,25 @@ Public Class Form1
         RefreshDGV()
     End Sub
 
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: cmdLast_Click               -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub is triggered when cmdLast is clicked. This sub      -'
+    '-   sets the Binding context position to the last position, and   -'
+    '-   then refreshed the DGV.                                       -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- sender – Identifies which particular control raised the click   –'
+    '-          event                                                  -'
+    '- e – Holds the EventArgs object sent to the routine              -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   (none)                                                        -'
+    '-------------------------------------------------------------------'
     Private Sub cmdLast_Click(sender As Object, e As EventArgs) Handles cmdLast.Click
         'Move Position to last row
         BindingContext(dsCustomers, "Customers").Position =
@@ -95,6 +219,25 @@ Public Class Form1
         RefreshDGV()
     End Sub
 
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: cmdAdd_Click                -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub is triggered when cmdAdd is clicked. This sub adds a -'
+    '-   new element to the dsCustomers. This sub then enables all     -'
+    '-   textboxes and clears them.                                    -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- sender – Identifies which particular control raised the click   –'
+    '-          event                                                  -'
+    '- e – Holds the EventArgs object sent to the routine              -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   cmdBuilder - OleBdCommandBuilder                              -'
+    '-------------------------------------------------------------------'
     Private Sub cmdAdd_Click(sender As Object, e As EventArgs) Handles cmdAdd.Click
         Dim cmdBuilder As OleDbCommandBuilder
 
@@ -123,8 +266,25 @@ Public Class Form1
 
     End Sub
 
-
-
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: cmdCancel_Click             -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub is triggered when cmdCancel is clicked. This sub     -'
+    '-   cancels the current edit being made on the dsCustomers DS.    -'
+    '-   This sub then calls cmdFirst_Click and AddNew(False).         -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- sender – Identifies which particular control raised the click   –'
+    '-          event                                                  -'
+    '- e – Holds the EventArgs object sent to the routine              -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   (none)                                                        -'
+    '-------------------------------------------------------------------'
     Private Sub cmdCancel_Click(sender As Object, e As EventArgs) Handles cmdCancel.Click
         BindingContext(dsCustomers, "Customers").CancelCurrentEdit()
         cmdFirst_Click(sender, e)
@@ -133,6 +293,25 @@ Public Class Form1
         AddNew(False)
     End Sub
 
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: cmdSave_Click               -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub is triggered when cmdSave is clicked. This sub       -'
+    '-   commits the changes done to the DS to DB, then calls          -'
+    '-   cmdFirst_Click And AddNew(False).                             -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- sender – Identifies which particular control raised the click   –'
+    '-          event                                                  -'
+    '- e – Holds the EventArgs object sent to the routine              -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   (none)                                                        -'
+    '-------------------------------------------------------------------'
     Private Sub cmdSave_Click(sender As Object, e As EventArgs) Handles cmdSave.Click
         'Stop any current edits.
         BindingContext(dsCustomers, "Customers").EndCurrentEdit()
@@ -151,6 +330,24 @@ Public Class Form1
         AddNew(False)
     End Sub
 
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: cmdUpdate_Click             -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub is triggered when cmdUpdate is clicked. This sub     -'
+    '-   enables the text box for users to edit.                       -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- sender – Identifies which particular control raised the click   –'
+    '-          event                                                  -'
+    '- e – Holds the EventArgs object sent to the routine              -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   cmdBuilder - OleBdCommandBuilder                              -'
+    '-------------------------------------------------------------------'
     Private Sub cmdUpdate_Click(sender As Object, e As EventArgs) Handles cmdUpdate.Click
         Dim cmdBuilder As OleDbCommandBuilder
 
@@ -158,13 +355,28 @@ Public Class Form1
         DBAdaptCustomers.InsertCommand = cmdBuilder.GetInsertCommand
 
 
-        'Clear out the current edits
+        ' Clear out the current edits
         BindingContext(dsCustomers, "Customers").EndCurrentEdit()
 
         ' Enable Textboxes and switch panels
         AddNew(True)
     End Sub
 
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: AddNew                      -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub either enables or disables textboxes.                -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- choice - boolean on weither to enable or disable textboxes.     -' 
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   (none)                                                        -'
+    '-------------------------------------------------------------------'
     Public Sub AddNew(choice As Boolean)
         If choice = True Then
             txtCity.Enabled = True
@@ -188,6 +400,22 @@ Public Class Form1
         End If
     End Sub
 
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: RefreshDGV                  -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub is clears all Items in the dsOrderedItems and then   -'
+    '-   reloads the info from the Ordered Items for the current Cust. -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- (none)                                                          -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   strSQLCmd - string to hold SQl command                        -'
+    '-------------------------------------------------------------------'
     Public Sub RefreshDGV()
         ' Clear dataset
         dsOrderedItems.Clear()
@@ -208,6 +436,26 @@ Public Class Form1
         dgvResults.DataSource = dsOrderedItems.Tables("OrderedItems")
     End Sub
 
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: cmdDelete_Click             -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 03/28/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub is triggered when cmdDelete is clicked. This sub     -'
+    '-   prompts the user wiether or not they would like to delete the -'
+    '-   selected record if the user says yes it gets deleted, if no   -'
+    '-   sub does nothing. The sub then refreshes the data set.        -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '- sender – Identifies which particular control raised the click   –'
+    '-          event                                                  -'
+    '- e – Holds the EventArgs object sent to the routine              -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-   cmdBuilder - OleBdCommandBuilder                              -'
+    '-------------------------------------------------------------------'
     Private Sub cmdDelete_Click(sender As Object, e As EventArgs) Handles cmdDelete.Click
         Dim strSQLCmd As String
         DBConn = New OleDbConnection(gstrConnString)

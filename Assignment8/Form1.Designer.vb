@@ -60,6 +60,7 @@ Partial Class Form1
         Me.dgvResults.Name = "dgvResults"
         Me.dgvResults.Size = New System.Drawing.Size(759, 256)
         Me.dgvResults.TabIndex = 0
+        Me.dgvResults.TabStop = False
         '
         'pnlSaveCancel
         '
@@ -70,7 +71,7 @@ Partial Class Form1
         Me.pnlSaveCancel.Location = New System.Drawing.Point(3, 221)
         Me.pnlSaveCancel.Name = "pnlSaveCancel"
         Me.pnlSaveCancel.Size = New System.Drawing.Size(753, 76)
-        Me.pnlSaveCancel.TabIndex = 1
+        Me.pnlSaveCancel.TabIndex = 8
         '
         'cmdCancel
         '
@@ -132,7 +133,7 @@ Partial Class Form1
         Me.cmdNext.Location = New System.Drawing.Point(673, 14)
         Me.cmdNext.Name = "cmdNext"
         Me.cmdNext.Size = New System.Drawing.Size(29, 49)
-        Me.cmdNext.TabIndex = 6
+        Me.cmdNext.TabIndex = 15
         Me.cmdNext.Text = ">>"
         Me.cmdNext.UseVisualStyleBackColor = True
         '
@@ -141,7 +142,7 @@ Partial Class Form1
         Me.cmdLast.Location = New System.Drawing.Point(708, 14)
         Me.cmdLast.Name = "cmdLast"
         Me.cmdLast.Size = New System.Drawing.Size(32, 49)
-        Me.cmdLast.TabIndex = 7
+        Me.cmdLast.TabIndex = 16
         Me.cmdLast.Text = "|>"
         Me.cmdLast.UseVisualStyleBackColor = True
         '
@@ -150,7 +151,7 @@ Partial Class Form1
         Me.cmdUpdate.Location = New System.Drawing.Point(419, 14)
         Me.cmdUpdate.Name = "cmdUpdate"
         Me.cmdUpdate.Size = New System.Drawing.Size(75, 49)
-        Me.cmdUpdate.TabIndex = 5
+        Me.cmdUpdate.TabIndex = 14
         Me.cmdUpdate.Text = "Update"
         Me.cmdUpdate.UseVisualStyleBackColor = True
         '
@@ -159,7 +160,7 @@ Partial Class Form1
         Me.cmdDelete.Location = New System.Drawing.Point(329, 14)
         Me.cmdDelete.Name = "cmdDelete"
         Me.cmdDelete.Size = New System.Drawing.Size(75, 49)
-        Me.cmdDelete.TabIndex = 4
+        Me.cmdDelete.TabIndex = 13
         Me.cmdDelete.Text = "Delete"
         Me.cmdDelete.UseVisualStyleBackColor = True
         '
@@ -168,7 +169,7 @@ Partial Class Form1
         Me.cmdBack.Location = New System.Drawing.Point(53, 14)
         Me.cmdBack.Name = "cmdBack"
         Me.cmdBack.Size = New System.Drawing.Size(29, 49)
-        Me.cmdBack.TabIndex = 2
+        Me.cmdBack.TabIndex = 11
         Me.cmdBack.Text = "<<"
         Me.cmdBack.UseVisualStyleBackColor = True
         '
@@ -177,7 +178,7 @@ Partial Class Form1
         Me.cmdAdd.Location = New System.Drawing.Point(236, 14)
         Me.cmdAdd.Name = "cmdAdd"
         Me.cmdAdd.Size = New System.Drawing.Size(75, 49)
-        Me.cmdAdd.TabIndex = 3
+        Me.cmdAdd.TabIndex = 12
         Me.cmdAdd.Text = "Add"
         Me.cmdAdd.UseVisualStyleBackColor = True
         '
@@ -186,7 +187,7 @@ Partial Class Form1
         Me.cmdFirst.Location = New System.Drawing.Point(15, 14)
         Me.cmdFirst.Name = "cmdFirst"
         Me.cmdFirst.Size = New System.Drawing.Size(32, 49)
-        Me.cmdFirst.TabIndex = 1
+        Me.cmdFirst.TabIndex = 10
         Me.cmdFirst.Text = "<|"
         Me.cmdFirst.UseVisualStyleBackColor = True
         '
