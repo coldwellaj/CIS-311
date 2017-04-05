@@ -1,6 +1,56 @@
-﻿Imports Microsoft.Office.Interop
+﻿'-------------------------------------------------------------------'
+'-          File name: Module1.vb                                  -'
+'-          Part of project: Assignment6                           -'
+'-------------------------------------------------------------------'
+'-          Written By: Alex Coldwell                              -'
+'-          Written On: 04/05/2017                                 -'
+'-------------------------------------------------------------------'
+'- File Purpose:                                                   -'
+'-                                                                 -'
+'- This file runs the program. It stores the employee info in the  -'
+'- ArrayList myEmps and then uses the Microsoft Office Excel       -'
+'- Library to create a payroll spreadsheet in Excel.               -'
+'-------------------------------------------------------------------'
+'- Program Purpose:                                                -'
+'-                                                                 -'
+'- This program creates an Excel payroll spreadsheet complete with -'
+'- Name, ID, Payrate, Hours, and Total Pay for each employee and   -'
+'- Average, Min, Max, and Total for each Coloumn.                  -'
+'-------------------------------------------------------------------'
+'- Global Variable Dictionary                                      -'
+'- (none)                                                          -'
+'-------------------------------------------------------------------'
+
+Imports Microsoft.Office.Interop
 Module Module1
     Const intOvertime As Integer = 40
+
+    '-------------------------------------------------------------------'
+    '-                    Subprogram Name: Main                        -'
+    '-------------------------------------------------------------------'
+    '-                    Written By: Alex Coldwell                    -'
+    '-                    Written On: 04/05/17                         -'
+    '-------------------------------------------------------------------'
+    '- Sub Purpose:                                                    -'
+    '-   This sub runs the program, it first creates and ArrayList of  -'
+    '-   the clsEmployee type. The Sub then fills in the info given for-'
+    '-   each employee. This Sub then creates on Excel spreadsheet for -'
+    '-   employee payroll. This sub then prints to the Excel           -'
+    '-   the Average, Min, Max, and Total for each column. This sub    -'
+    '-   then prompts the user that their spreadsheet is complete and  -'
+    '-   leaves the spreadsheet open for the user to view.             -'
+    '-------------------------------------------------------------------'
+    '- Parameter Dictionary (in parameter order):                      -'
+    '-  (none)                                                         -'
+    '-------------------------------------------------------------------'
+    '- Local Variable Dictionary (alphabetically):                     -'
+    '-  myEmps: ArrayList of clsEmployees                              -'
+    '-  CheckExcel: An object to check if Excel is running or not      -'
+    '-  anExcelDoc: An Excel Application                               -'
+    '-  intLoop: Integer counter to keep track of which row is being   -'
+    '-      printed                                                    -'
+    '-  intEmpsLength: current length of the myEmps ArrayList          -'
+    '-------------------------------------------------------------------'
     Sub Main()
         Dim myEmps As New ArrayList()
 
@@ -24,8 +74,6 @@ Module Module1
         Dim anExcelDoc As Excel.Application
         Dim intLoop As Integer
         Dim intEmpsLength As Integer = myEmps.Count()
-        Dim dblPay As Double = 0
-        Dim dblOvertime As Double = 0
 
         'Check to see if Excel is already loaded in memory
 
@@ -56,7 +104,6 @@ Module Module1
 
         'Put some data on the sheet
         For intLoop = 0 To intEmpsLength - 1
-            dblOvertime = 0
             anExcelDoc.Cells(intLoop + 2, 1) = myEmps(intLoop).strName
             anExcelDoc.Cells(intLoop + 2, 2) = myEmps(intLoop).intId
             anExcelDoc.Cells(intLoop + 2, 3) = myEmps(intLoop).dblPay
