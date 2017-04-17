@@ -1,0 +1,9 @@
+C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\bin\Debug\Spell Checker.dll
+C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\bin\Debug\Spell Checker.pdb
+C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\bin\Debug\Spell Checker.xml
+C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\obj\Debug\Spell_Checker.Resources.resources
+C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\obj\Debug\Spell_Checker.UserControl1.resources
+C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\obj\Debug\Spell Checker.vbproj.GenerateResource.Cache
+C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\obj\Debug\Spell Checker.dll
+C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\obj\Debug\Spell Checker.xml
+C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\obj\Debug\Spell Checker.pdb
