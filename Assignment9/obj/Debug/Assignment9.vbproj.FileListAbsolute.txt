@@ -20,3 +20,8 @@ C:\Users\coldw\Documents\School\CIS-311\Assignment9\bin\Debug\Assignment9.xml
 C:\Users\coldw\Documents\School\CIS-311\Assignment9\obj\Debug\Assignment9.vbprojResolveAssemblyReference.cache
 C:\Users\coldw\Documents\School\CIS-311\Assignment9\obj\Debug\Assignment9.Resources.resources
 C:\Users\coldw\Documents\School\CIS-311\Assignment9\obj\Debug\Assignment9.vbproj.GenerateResource.Cache
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment9\bin\Debug\Assignment9.exe.config
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment9\obj\Debug\Assignment9.vbproj.ResolveComReference.cache
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment9\obj\Debug\Assignment9.exe
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment9\obj\Debug\Assignment9.xml
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Assignment9\obj\Debug\Assignment9.pdb
