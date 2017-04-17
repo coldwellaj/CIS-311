@@ -10,3 +10,7 @@ C:\Users\coldw\Documents\School\CIS-311\Program10\obj\Debug\Program10.vbproj.Gen
 C:\Users\coldw\Documents\School\CIS-311\Program10\obj\Debug\Program10.exe
 C:\Users\coldw\Documents\School\CIS-311\Program10\obj\Debug\Program10.xml
 C:\Users\coldw\Documents\School\CIS-311\Program10\obj\Debug\Program10.pdb
+C:\Users\coldw\Documents\School\CIS-311\Assignment10\bin\Debug\Program10.exe.config
+C:\Users\coldw\Documents\School\CIS-311\Assignment10\obj\Debug\Program10.exe
+C:\Users\coldw\Documents\School\CIS-311\Assignment10\obj\Debug\Program10.xml
+C:\Users\coldw\Documents\School\CIS-311\Assignment10\obj\Debug\Program10.pdb
