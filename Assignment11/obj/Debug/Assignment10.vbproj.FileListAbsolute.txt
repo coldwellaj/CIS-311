@@ -1,0 +1,8 @@
+C:\Users\coldw\Documents\School\CIS-311\Assignment8 - Copy\bin\Debug\Assignment8.exe.config
+C:\Users\coldw\Documents\School\CIS-311\Assignment8 - Copy\obj\Debug\Assignment8.exe
+C:\Users\coldw\Documents\School\CIS-311\Assignment8 - Copy\obj\Debug\Assignment8.xml
+C:\Users\coldw\Documents\School\CIS-311\Assignment8 - Copy\obj\Debug\Assignment8.pdb
+C:\Users\coldw\Documents\School\CIS-311\Assignment11\bin\Debug\Assignment8.exe.config
+C:\Users\coldw\Documents\School\CIS-311\Assignment11\obj\Debug\Assignment8.exe
+C:\Users\coldw\Documents\School\CIS-311\Assignment11\obj\Debug\Assignment8.xml
+C:\Users\coldw\Documents\School\CIS-311\Assignment11\obj\Debug\Assignment8.pdb
