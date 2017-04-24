@@ -1,4 +1,19 @@
-﻿Public Class Language
+﻿'--------------------------------------------------------------------'
+'-          File name: Language.vb                                  -'
+'-          Part of project: Assignment11                           -'
+'--------------------------------------------------------------------'
+'-          Written By: Alex Coldwell                               -'
+'-          Written On: 04/24/2017                                  -'
+'--------------------------------------------------------------------'
+'- File Purpose:                                                    -'
+'-                                                                  -'
+'- This file runs the language form where the user is allowed to    -'
+'- select from spanish, english, or norwegian. This sets the default-'
+'- language for the application.                                    -'
+'--------------------------------------------------------------------'
+'- (none)                                                           -'
+'--------------------------------------------------------------------'
+Public Class Language
     Private Sub cmdSelect_Click(sender As Object, e As EventArgs) Handles cmdSelect.Click
         My.Settings.defaultLanguage = cbxLanguage.SelectedItem
 

@@ -1,5 +1,21 @@
 ﻿Imports Microsoft.VisualBasic.ApplicationServices
 
+'--------------------------------------------------------------------'
+'-          File name: ApplicationEvents.vb                         -'
+'-          Part of project: Assignment11                           -'
+'--------------------------------------------------------------------'
+'-          Written By: Alex Coldwell                               -'
+'-          Written On: 04/24/2017                                  -'
+'--------------------------------------------------------------------'
+'- File Purpose:                                                    -'
+'-                                                                  -'
+'- This file loads the saved default language and sets the current  -'
+'- Culture Info. If -settings is entered from the command prompt    -'
+'- the apllication will load the Language form first to select a    -'
+'- language.                                                        -'
+'--------------------------------------------------------------------'
+'- (none)                                                           -'
+'--------------------------------------------------------------------'
 Namespace My
     Partial Friend Class MyApplication
         'Load Prevoious selected language
