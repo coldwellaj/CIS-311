@@ -7,3 +7,12 @@ C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\obj\Debug\Spell Ch
 C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\obj\Debug\Spell Checker.dll
 C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\obj\Debug\Spell Checker.xml
 C:\Users\coldw\AppData\Local\Temporary Projects\Spell Checker\obj\Debug\Spell Checker.pdb
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Spell Checker\bin\Debug\Spell Checker.dll
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Spell Checker\bin\Debug\Spell Checker.pdb
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Spell Checker\bin\Debug\Spell Checker.xml
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Spell Checker\obj\Debug\Spell_Checker.Resources.resources
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Spell Checker\obj\Debug\Spell_Checker.UserControl1.resources
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Spell Checker\obj\Debug\Spell Checker.vbproj.GenerateResource.Cache
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Spell Checker\obj\Debug\Spell Checker.dll
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Spell Checker\obj\Debug\Spell Checker.xml
+C:\Users\ajcoldwe\Source\Repos\CIS-311\Spell Checker\obj\Debug\Spell Checker.pdb
